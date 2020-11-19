@@ -1,0 +1,2 @@
+  
+// [{"pk": 1, "model": "products.product", "fields": { "name": "Tomato", "description": "Small Swedish tomato, Avalibale in Goteborg center  ", "price": 53.99, "unit": 2, "category": 1, "image_url": "media/fixtures/tomato.jpeg", "image": "tomato.jpeg"}}]
