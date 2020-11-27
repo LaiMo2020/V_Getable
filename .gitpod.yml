@@ -11,3 +11,5 @@ vscode:
     - esbenp.prettier-vscode@5.7.1:4Zx39KyQMoIz7x94PSmDmQ==
     - kevinglasson.cornflakes-linter@0.5.1:KAaMshgHOKan8eojXQ53OQ==
 
+    - batisteo.vscode-django@1.0.0:mZ71Mni9VDde+Dcn1fmlwA==
+    - samuelcolvin.jinjahtml@0.15.0:DAGgO4M/cnuxqBhFQ/C/Gw==
