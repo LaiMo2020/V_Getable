@@ -7,6 +7,7 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = (
             ('Vegetable', 'Vegetable'),
             ('Fruits', 'Fruits'),
+            ('Farm-Product', 'Farm-Product')
         )
 
 
@@ -18,6 +19,8 @@ class ProductAdmin(admin.ModelAdmin):
         'unit',
         'image',
     )
+
+    ordering = ('name', )
 
 
 admin.site.register(Product)
