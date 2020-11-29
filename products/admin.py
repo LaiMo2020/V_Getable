@@ -4,11 +4,7 @@ from .models import Product, Category
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = (
-            ('Vegetable', 'Vegetable'),
-            ('Fruits', 'Fruits'),
-            ('Farm-Product', 'Farm-Product')
-        )
+    list_display = ('name', )
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -23,7 +19,7 @@ class ProductAdmin(admin.ModelAdmin):
     ordering = ('name', )
 
 
-admin.site.register(Product)
-admin.site.register(Category)
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Category, CategoryAdmin)
 
 
