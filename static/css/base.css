@@ -79,3 +79,18 @@ body {
         padding-top: 164px;
     }
 }
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+.card-img-top{
+    float: left;
+    width:  300px;
+    height: 300px;
+    object-fit: cover;
+}
