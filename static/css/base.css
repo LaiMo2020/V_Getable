@@ -94,3 +94,15 @@ body {
     height: 300px;
     object-fit: cover;
 }
+.navbar{
+    background-color:green;
+}
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
