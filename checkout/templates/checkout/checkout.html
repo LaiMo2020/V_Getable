@@ -32,9 +32,7 @@
                     <div class="col-7 offset-2">
                         <p class="mb-1 mt-0 small text-muted">Item</p>
                     </div>
-                    <div class="col-3 text-right">
-                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>
-                    </div>
+                 
                 </div>
                 {% for item in bag_items %}
                     <div class="row">
@@ -47,11 +45,7 @@
                                 {% endif %}
                             </a>
                         </div>
-                        <div class="col-7">
-                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                           
-                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                        </div>
+                    
                       
                     </div>
                 {% endfor %}
