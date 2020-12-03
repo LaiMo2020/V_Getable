@@ -1,0 +1,1 @@
+web: gunicorn v_gtable.wsgi:application
