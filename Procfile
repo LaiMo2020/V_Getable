@@ -1,1 +1,1 @@
-web: gunicorn v_gtable.wsgi:application
+web: gunicorn V_Getable.wsgi:application
