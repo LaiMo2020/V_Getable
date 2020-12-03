@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'w3lo79*gz4fhm&^uj-*ux@vh*gw&e4dss!zx@&pszu26$l!s8y'
+SECRET_KEY = os.environ.get('SECRET_KEY', '9uxn34u*in$3%^g*thm%s%iswmvzl@sv3mv@3jtr5ba_ytu7b^')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['v-gtable.herokuapp.com', 'localhost']
 
