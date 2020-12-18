@@ -45,6 +45,7 @@
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-black my-0">V_<strong>G</strong>etable</h2>
                 </a>
+                
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
@@ -94,13 +95,14 @@
                                         $0.00
                                     {% endif %}
                                 </p>
+                      
                             </div>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="row bg-pink">
+        <div class="row">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -111,7 +113,8 @@
         </div>
             <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
+ <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>      
+                       
             </div>            
         </div>
     </header>
@@ -146,7 +149,7 @@
     </script>
     {% endblock %}
 
-    <footer class="py-3 bg-dark text-center footer mb-0">
+    <footer class="py-3 bg-dark text-center text-white footer mb-0">
     <h6>Copyright &copy; 2020
        Laimo & V_Getable</h6>
 </footer>

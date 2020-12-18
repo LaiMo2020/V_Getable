@@ -23,12 +23,33 @@
 
                 </h1>
                 <div class="my-5">
-                    <h4>
+                  
+                          <h4>
                         <a href="{% url 'products'%}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Buy & Eat Green</a>
                     </h4>
+                    
+                    
                 </div>
             </div>
         </div>
     </div>
-    {% endfor %}
+       {% endfor %}
+   <div class="jumbotron jumbotron-billboard">
+  
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+              <h2>Register</h2>
+               
+                 <div id="delivery-banner" class="row text-center">
+            <div class="col bg-black text-white">
+                <h4 class="logo-font my-1">Signe Up and earn Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
+            </div>            
+        </div>
+                	
+                <a href="#" class="btn btn-success btn-lg">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
