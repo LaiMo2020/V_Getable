@@ -5,17 +5,10 @@
     <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container footer-margin">
         <div class="row">
             <div class="col">
                 <hr>
@@ -23,7 +16,7 @@
                 <hr>
             </div>
         </div>
-        <div class="row">
+        <div class="row footer-margin">
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Default Delivery Information</p>
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
@@ -34,7 +27,7 @@
             </div>
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Order History</p>
-                <div class="order-history table-responsive">
+                <div class="order-history table-responsive footer-margin">
                     <table class="table table-sm table-borderless">
                         <thead>
                             <tr>
@@ -71,6 +64,7 @@
                     </table>
                 </div>
             </div>
+        </div>
         </div>
 {% endblock %}
 
