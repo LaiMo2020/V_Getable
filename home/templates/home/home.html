@@ -1,55 +1,33 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
- 
-
-     
-{% endblock %}
-
 {% block content %}
-{% for product in products %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    Local Fresh Vegetables
-                    {{ product.name }}
 
-                </h1>
-                <div class="my-5">
-                  
-                          <h4>
-                        <a href="{% url 'products'%}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Buy & Eat Green</a>
-                    </h4>
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-       {% endfor %}
-   <div class="jumbotron jumbotron-billboard">
+<div class="card bg-dark">
+    <img src="https://images.unsplash.com/photo-1494178342956-693723378cfd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"
+        class="card-img" alt="">
+    <div class="card-img-overlay" style="color: #fff;">
+      <p class="h1 m-t-5">Let´s vegetable with us!</p>
+        <p class="card-text">
+
+</p>
+</div>
+</div>
+
+<div class="card text-center">
   
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-              <h2>Register</h2>
-               
-                 <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Signe Up and earn Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
-            </div>            
-        </div>
-                	
-                <a href="#" class="btn btn-success btn-lg">Sign Up</a>
-            </div>
-        </div>
+
+    <div class="card-body">
+        
+        <p class="card-text"> If you aim to follow a healthy and sustainable lifestyle you found the right place! We are a group of farmers and gardeners located in the region of Göteborg in Sweden and we all share one big passion: to grow and produce healthy and fresh products and deliver them to our clients in a collected way. When ordering your food from us you do not only prevent individual traffic in the city but also support small local and a sustainable way of food production. </p>
+        
+    </div>
+
+    <div class="card-footer text-muted footer-margin">
+        <p class="card-text"> Lets get started and browse through our products or learn more in the blog! </p>
+        <a href="{% url 'products'%}" class="btn product">Go to our shop</a><br><br>
+        <a href="{% url 'all_posts'%}" class="btn blog">Go to our blog</a>
     </div>
 </div>
+
 {% endblock %}
