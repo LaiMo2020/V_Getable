@@ -3,7 +3,11 @@ from .models import Post, Comment
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'status', 'created_on')
+    list_display = (
+        'title',
+        'slug',
+        'status',
+        'created_on')
     list_filter = ("status",)
     search_fields = ['title', 'content']
     prepopulated_fields = {'slug': ('title',)}
@@ -11,10 +15,17 @@ class PostAdmin(admin.ModelAdmin):
 
 admin.site.register(Post, PostAdmin)
 
+# users comments
+
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'body', 'post', 'created_on', 'active')
+    list_display = (
+        'name',
+        'body',
+        'post',
+        'created_on',
+        'active')
     list_filter = ('active', 'created_on')
     search_fields = ('name', 'email', 'body')
     actions = ['approve_comments']
