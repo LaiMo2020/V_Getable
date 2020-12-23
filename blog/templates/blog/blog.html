@@ -21,7 +21,7 @@
         {% if post.image %}
         <img class="card-img mx-auto" id="card-1" src="{{ post.image.url }}" alt="{{ post.title }}" />
         {% else %}
-        <img class="card-img mx-auto" src="{{ MEDIA_URL }}no-avalibale-img.png" alt="{{ post.title }}" />
+        <img class="card-img mx-auto" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}" />
         {% endif %}
         <p style="margin: 1rem;" class="card-text">{{ post.content|safe|slice:":300" }}...</p>
         <a href="{% url 'post_detail' post.slug  %}" class="btn blog">Read More</a>
