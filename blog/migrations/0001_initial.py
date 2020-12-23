@@ -24,7 +24,6 @@ class Migration(migrations.Migration):
                 ('content', models.TextField()),
                 ('created_on', models.DateTimeField(auto_now_add=True)),
                 ('status', models.IntegerField(choices=[(0, 'Draft'), (1, 'Publish')], default=0)),
-                ('image_url', models.URLField(blank=True, max_length=1024, null=True)),
                 ('image', models.ImageField(blank=True, null=True, upload_to='')),
                 ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='blog_posts', to=settings.AUTH_USER_MODEL)),
             ],
