@@ -1,51 +1,75 @@
 {% extends "base.html" %} {% load static %}
 {% block content %}
-<style>
-    body {
-        font-family: "Roboto", sans-serif;
-        font-size: 18px;
-        background-color: #fdfdfd;
-    }
-    
-    .head_text {
-        color: white;
-    }
-    
-    .card {
-        box-shadow: 0 16px 48px #E3E7EB;
-    }
-</style>
 
-<header class="masthead">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class=" col-md-8 col-md-10 mx-auto">
-                <div class="site-heading">
-                    <h3 class=" site-heading my-4 mt-3 text-white"> Welcome to my awesome Blog </h3>
-                    <p class="text-light">We Love Django As much as you do..! &nbsp
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<div class="container">
+<!-- Jumbotron -->
+<div class="jumbotron-container blog-jumbotron-section">
     <div class="row">
-        <!-- Blog Entries Column -->
-        <div class="col-md-8 mt-3 left">
-            {% for post in post_list %}
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h2 class="card-title">{{ post.title }}</h2>
-                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-                    <p class="card-text">{{post.content|slice:":200" }}</p>
-                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
-                </div>
+        <div class="col-12">
+            <div class="jumbotron blog-jumbotron-content text-center">
+                <h1 class="display-4">Blog</h1>
             </div>
-            {% endfor %}
         </div>
-       
     </div>
 </div>
-{%endblock%}
+
+{% for post in post_list %}
+<div class="card text-center">
+    <div class="card-header">
+        {{ post.title }}
+    </div>
+    <div class="card-body">
+        {% if post.image %}
+        <img class="card-img mx-auto" id="card-1" src="{{ post.image.url }}" alt="{{ post.title }}" />
+        {% else %}
+        <img class="card-img mx-auto" src="{{ MEDIA_URL }}no-avalibale-img.png" alt="{{ post.title }}" />
+        {% endif %}
+        <p style="margin: 1rem;" class="card-text">{{ post.content|safe|slice:":300" }}...</p>
+        <a href="{% url 'post_detail' post.slug  %}" class="btn blog">Read More</a>
+    </div>
+    <div class="card-footer text-muted">
+        {{ post.author }} | {{ post.created_on}}
+    </div>
+</div>
+{% endfor %}
+
+
+
+<!-- Pagination -->
+<div>
+    {% if post_list.has_other_pages %}
+    <nav aria-label="Page navigation conatiner">
+        <ul class="pagination justify-content-center">
+            {% if post_list.has_previous %}
+            <li>
+                <a href="?page={{ post_list.previous_page_number }}" class="page-link btn-secondary">&laquo; Previous
+                    Page
+                </a>
+            </li>
+            {% endif %} {% if post_list.has_next %}
+            <li>
+                <a href="?page={{ post_list.next_page_number }}" class="page-link btn-secondary">
+                    Next page &raquo;</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+{% endif %}
+
+<!-- Back to top button -->
+<div class="btt-button">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-circle-up"></i>
+    </a>
+</div>
+
+
+{% endblock %} {% block postloadjs %}
+<!-- Back to top button script -->
+{{ block.super }}
+<script>
+    $(".btt-link").click(function (e) {
+        window.scrollTo(0, 0);
+    });
+</script>
+{% endblock %}

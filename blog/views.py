@@ -1,19 +1,24 @@
 from django.shortcuts import render, get_object_or_404
-from . models import Post
-from django.core.paginator import Paginator, PageNotAnInteger
+from .models import Post
+from .froms import CommentForm
+
+
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from profiles.models import UserProfile
 
 
 def all_posts(request):
+    """ The blog page """
     post_list = Post.objects.filter(status=1).order_by('-created_on')
     paginator = Paginator(post_list, 4)
     page = request.GET.get('page')
     try:
         post_list = paginator.page(page)
     except PageNotAnInteger:
-
+        # If page is not an integer deliver the first page
         post_list = paginator.page(1)
-
+    except EmptyPage:
+        # If page is out of range deliver last page of results
         post_list = paginator.page(paginator.num_pages)
 
     context = {
