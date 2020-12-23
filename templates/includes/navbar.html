@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg text-white navbar-light bg-dark">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav text">
+            <li class="nav-item active">
+                <a class="nav-link text-white" href="{% url 'home' %}">V-Getable <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'products'%}">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'all_posts'%}">Blog</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                    <a class="dropdown-item" href="{% url 'add_product' %}">Product Management</a>
+                    {% endif %}
+                    <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
+                    <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                    {% else %}
+                    <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
+                    <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                    {% endif %}
+                </div>
+            </li>
+
+        </ul>
+
+        <form method="GET" action="{% url 'products' %}" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search" aria-label="Search Product">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+
+    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+        href="{% url 'view_bag' %}">
+        <div class="text-center">
+            <div><i class="fas fa-shopping-basket fa-lg"></i></div>
+            <p class="my-0">
+                {% if grand_total %}
+                ${{ grand_total|floatformat:2 }}
+                {% else %}
+                $0.00
+                {% endif %}
+            </p>
+        </div>
+    </a>
+    
+</nav>
