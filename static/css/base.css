@@ -291,3 +291,11 @@ footer {
     margin: 0 auto;
     text-align: center;
 }
+.products{
+    margin-left: 4rem;
+}
+@media (max-width: 991px) {
+    .products {
+        margin-left: 2rem;
+    }
+}
