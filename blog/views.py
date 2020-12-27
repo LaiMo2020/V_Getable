@@ -1,8 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post
 from .forms import CommentForm
-
-
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from profiles.models import UserProfile
 

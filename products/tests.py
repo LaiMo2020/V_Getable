@@ -1,3 +1,9 @@
 from django.test import TestCase
+from products.forms import ProductForm
 
-# Create your tests here.
+
+class TestProductForm(TestCase):
+
+    def test_product_name_is_required(self):
+        form = ProductForm({'name': 'Test name'})
+        self.assertFalse(form.is_valid())
