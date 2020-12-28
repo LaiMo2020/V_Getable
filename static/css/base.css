@@ -6,7 +6,7 @@ html {
 }
 
 body {
-   
+
     height: calc(100vh - 164px);
     height: 100%;
     color: #003;
@@ -222,9 +222,9 @@ input[name='q']::placeholder {
 /* fixed top navbar only on medium and up */
 
 
-    .header-container {
-        padding-top: 164px;
-    }
+.header-container {
+    padding-top: 164px;
+}
 
 
 
@@ -291,9 +291,11 @@ footer {
     margin: 0 auto;
     text-align: center;
 }
-.products{
+
+.products {
     margin-left: 4rem;
 }
+
 @media (max-width: 991px) {
     .products {
         margin-left: 2rem;
