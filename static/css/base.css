@@ -42,13 +42,16 @@ body {
     background: black;
     color: white;
 }
+button.navbar-toggler,
 .search,
 .blog,
 .product {
     background-color: #88AA93;
 }
 
-
+/* button.navbar-toggler{
+    background-color:#88AA93 !important;
+} */
 
 .shop-now-button:hover,
 .shop-now-button:active,
