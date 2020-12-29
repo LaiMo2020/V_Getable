@@ -6,7 +6,7 @@ from profiles.models import UserProfile
 
 
 def all_posts(request):
-    """ The blog page """
+    """ The blog page adding new post to the blog """
     post_list = Post.objects.filter(status=1).order_by('-created_on')
     paginator = Paginator(post_list, 4)
     page = request.GET.get('page')
@@ -29,6 +29,7 @@ def all_posts(request):
 
 
 def post_detail(request, slug):
+    """ users comment on the a post in the blog  """
     template_name = 'blog/post_detail.html'
     post = get_object_or_404(Post, slug=slug)
     comments = post.comments.filter(active=True)
