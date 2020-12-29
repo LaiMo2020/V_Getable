@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
-{% block content %}
 
 <!-- Post Detail -->
+{% block content %}
 
 <!-- Add A comment -->
-
 <div class="container">
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 left  top">
@@ -16,7 +15,6 @@
             </div>
         </div>
   
-
         <div class="col-md-8 card mb-4  mt-3">
             <div class="card-body">
                 <!-- comments -->
@@ -31,7 +29,7 @@
                     <p class="font-weight-bold">
                         {{ comment.name }}
                         <span class=" text-muted font-weight-normal">
-                            {{ comment.created_on }}
+                        {{ comment.created_on }}
                         </span>
                     </p>
                     {{ comment.body | linebreaks }}
@@ -40,21 +38,22 @@
                 {% endfor %}
             </div>
         </div>
+
         <div class="col-md-8 card footer-margin">
             <div class="card-body ">
-                {% if new_comment %}
+            {% if new_comment %}
                 <div class="alert alert-success" role="alert">
-                    Your comment is awaiting moderation
+                            Your comment is awaiting moderation
                 </div>
-                {% else %}
+            {% else %}
                 <h3>Leave a comment</h3>
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn  blog ">Submit</button>
+                <button type="submit" class="btn  blog ">Submit</button>
                 </form>
-                {% endif %}
-            </div>
+            {% endif %}
+                    </div>
         </div>
     </div>
 </div>
