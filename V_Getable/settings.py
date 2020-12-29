@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
+import env
+
 from pathlib import Path
 import dj_database_url
 
@@ -22,11 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '9uxn34u*in$3%^g*thm%s%iswmvzl@sv3mv@3jtr5ba_ytu7b^')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = 'DEVELOPMENT' in os.environ
 
+
+# DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = True
 ALLOWED_HOSTS = ['v-gtable.herokuapp.com', 'localhost']
 
@@ -81,7 +84,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # required by allauth
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
