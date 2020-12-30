@@ -67,3 +67,35 @@
              
             </nav>
         </div>
+
+        * from Bulma */
+/* .icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+#homepage-card {
+    margin-top: 5% !important;
+} */
+
+/* .card-header{
+    background-color: #9BE7CC !important;
+}
+.card-footer{
+    background-color: #9BE7CC !important;
+} */
+
+/* input[name='q']::placeholder {
+    color: #aab7c4;
+} */
