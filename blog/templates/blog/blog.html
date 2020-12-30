@@ -1,16 +1,13 @@
 {% extends "base.html" %} {% load static %}
 {% block content %}
 
-<!-- Jumbotron -->
-<div class="jumbotron-container blog-jumbotron-section">
-    <div class="row">
-        <div class="col-12">
-            <div class="jumbotron blog-jumbotron-content text-center">
-                <h1 class="display-4">Blog</h1>
-            </div>
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col h1 text-center">BLOG</div>
         </div>
     </div>
-</div>
+{% endblock %}
 
 {% for post in post_list %}
 <div class="card text-center">
