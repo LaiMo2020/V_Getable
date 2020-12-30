@@ -3,6 +3,7 @@
 html {
     margin: 0;
     height: 100%;
+    
 }
 
 body {
@@ -164,7 +165,7 @@ input[name='q']::placeholder {
 
 
 
-/* -------------------------------- Media Queries */
+
 
 
 
@@ -222,7 +223,6 @@ input[name='q']::placeholder {
 
 
 
-/* fixed top navbar only on medium and up */
 
 
 .header-container {
@@ -232,13 +232,12 @@ input[name='q']::placeholder {
 
 
 .card-img-top {
-    float: left;
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
 }
 
-#card-1 {
+.card-1 {
     width: 300px;
     height: auto;
     object-fit: cover;
@@ -267,7 +266,7 @@ footer {
 #container {
     margin-top: 100px !important;
 }
-
+/* 
 .post {
     display: flex;
     flex-direction: column;
@@ -278,29 +277,18 @@ footer {
     height: 80vh;
     color: #fff;
     border: solid 5px black;
-}
+} */
 
-.post-img {
-    width: 500px;
-    height: 500px;
-}
 
-.post-dev {
-    margin: 0 auto;
-    text-align: center;
-}
+/* .products {
+    margin: 2rem;
 
-.post-img-dev {
-    margin: 0 auto;
-    text-align: center;
-}
+} */
 
-.products {
-    margin-left: 4rem;
-}
 
-@media (max-width: 991px) {
+/* -------------------------------- Media Queries */
+/* @media (max-width: 991px) {
     .products {
-        margin-left: 2rem;
+        margin-left: 0rem !important;
     }
-}
+} */
