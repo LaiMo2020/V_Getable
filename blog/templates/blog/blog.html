@@ -19,9 +19,9 @@
     </div>
     <div class="card-body">
         {% if post.image %}
-        <img class="card-img mx-auto" id="card-1" src="{{ post.image.url }}" alt="{{ post.title }}" />
+            <img class="card-img mx-auto card-1" src="{{ post.image.url }}" alt="{{ post.title }}" />
         {% else %}
-        <img class="card-img mx-auto" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}" />
+            <img class="card-img mx-auto card-1" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}" />
         {% endif %}
         <p style="margin: 1rem;" class="card-text">{{ post.content|safe|slice:":300" }}...</p>
         <a href="{% url 'post_detail' post.slug  %}" class="btn blog">Read More</a>
@@ -32,39 +32,31 @@
 </div>
 {% endfor %}
 
-
-
 <!-- Pagination -->
 <div>
     {% if post_list.has_other_pages %}
     <nav aria-label="Page navigation conatiner">
         <ul class="pagination justify-content-center">
             {% if post_list.has_previous %}
-            <li>
-                <a href="?page={{ post_list.previous_page_number }}" class="page-link btn-secondary">&laquo; Previous
-                    Page
-                </a>
-            </li>
-            {% endif %} {% if post_list.has_next %}
-            <li>
-                <a href="?page={{ post_list.next_page_number }}" class="page-link btn-secondary">
-                    Next page &raquo;</a>
-            </li>
+                <li>
+                    <a href="?page={{ post_list.previous_page_number }}" class="page-link btn-secondary">&laquo; Previous
+                        Page
+                    </a>
+                </li>
+            {% endif %} 
+            {% if post_list.has_next %}
+                <li>
+                    <a href="?page={{ post_list.next_page_number }}" class="page-link btn-secondary">
+                        Next page &raquo;</a>
+                </li>
             {% endif %}
         </ul>
     </nav>
 </div>
 {% endif %}
+{% endblock %} 
 
-<!-- Back to top button -->
-<div class="btt-button">
-    <a class="btt-link d-flex h-100">
-        <i class="fas fa-arrow-circle-up"></i>
-    </a>
-</div>
-
-
-{% endblock %} {% block postloadjs %}
+{% block postloadjs %}
 <!-- Back to top button script -->
 {{ block.super }}
 <script>
