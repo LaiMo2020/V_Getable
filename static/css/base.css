@@ -181,6 +181,10 @@ input[name='q']::placeholder {
     padding-top: 164px;
 }
 
+.bag{
+    color:  #88AA93;
+}
+
 /* images product style  */
 .card-img-top {
     width: 350px;
@@ -193,7 +197,6 @@ input[name='q']::placeholder {
     height: auto;
     object-fit: cover;
 }
-
 
 /* footer  */
 footer {
