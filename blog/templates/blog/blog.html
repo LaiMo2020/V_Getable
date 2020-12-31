@@ -1,13 +1,16 @@
 {% extends "base.html" %} {% load static %}
-{% block content %}
+
 
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col h1 text-center"></div>
+            <div class="col h1 text-center"> BLOG</div>
         </div>
     </div>
 {% endblock %}
+{% block content %}
+
+
 
 {% for post in post_list %}
 <div class="card text-center">
