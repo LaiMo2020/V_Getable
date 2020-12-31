@@ -5,30 +5,22 @@
 
 <div class="card bg-dark">
     <img src="https://images.unsplash.com/photo-1494178342956-693723378cfd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"
-        class="card-img" alt="">
+         class="card-img" alt="">
     <div class="card-img-overlay" style="color: #fff;">
-      <p class="h2 m-t-5">Let´s vegetable!</p>
-      <p class="h5 m-t-5">Sign-up & eat fresh!<br>Free delivery from 30$</p>
-       
-
-    
+    <p class="h2 m-t-5">Let´s vegetable!</p>
+    <p class="h5 m-t-5">Sign-up & eat fresh!<br>Free delivery from 30$</p>
+    </div>
 </div>
-</div>
-
 <div class="card text-center">
-  
-
-    <div class="card-body">
-        
-        <p class="card-text"> If you aim to follow a healthy and sustainable lifestyle you found the right place! We are a group of farmers and gardeners located in the region of Göteborg in Sweden and we all share one big passion: to grow and produce healthy and fresh products and deliver them to our clients in a collected way. When ordering your food from us you do not only prevent individual traffic in the city but also support small local and a sustainable way of food production. </p>
-        
-    </div>
-
-    <div class="card-footer text-muted footer-margin">
-        <p class="card-text"> Lets get started and browse through our products or learn more in the blog! </p>
-        <a href="{% url 'products'%}" class="btn product">Go to our shop</a><hr>
-        <a href="{% url 'all_posts'%}" class="btn blog">Go to our blog</a>
-    </div>
+   <div class="card-body">
+      <p class="card-text"> If you aim to follow a healthy and sustainable lifestyle you found the right place! We are a group of farmers and gardeners located in the region of Göteborg in Sweden and we all share one big passion: to grow and produce healthy and fresh products and deliver them to our clients in a collected way. When ordering your food from us you do not only prevent individual traffic in the city but also support small local and a sustainable way of food production. </p>
+   </div>
+   <div class="card-footer text-muted footer-margin">
+      <p class="card-text"> Lets get started and browse through our products or learn more in the blog! </p>
+      <a href="{% url 'products'%}" class="btn product">Go to our shop</a>
+      <hr>
+      <a href="{% url 'all_posts'%}" class="btn blog">Go to our blog</a>
+   </div>
 </div>
 
 {% endblock %}

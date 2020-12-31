@@ -4,7 +4,7 @@
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col h1 text-center">BLOG</div>
+            <div class="col h1 text-center"></div>
         </div>
     </div>
 {% endblock %}
@@ -32,20 +32,20 @@
 <!-- Pagination -->
 <div>
     {% if post_list.has_other_pages %}
-    <nav aria-label="Page navigation conatiner">
-        <ul class="pagination justify-content-center">
-            {% if post_list.has_previous %}
-                <li>
-                    <a href="?page={{ post_list.previous_page_number }}" class="page-link btn-secondary">&laquo; Previous
-                        Page
-                    </a>
-                </li>
-            {% endif %} 
-            {% if post_list.has_next %}
-                <li>
-                    <a href="?page={{ post_list.next_page_number }}" class="page-link btn-secondary">
-                        Next page &raquo;</a>
-                </li>
+        <nav aria-label="Page navigation conatiner">
+            <ul class="pagination justify-content-center">
+                {% if post_list.has_previous %}
+                    <li>
+                        <a href="?page={{ post_list.previous_page_number }}" class="page-link btn-secondary">&laquo; Previous
+                            Page
+                        </a>
+                    </li>
+    {% endif %} 
+    {% if post_list.has_next %}
+        <li>
+            <a href="?page={{ post_list.next_page_number }}" class="page-link btn-secondary">
+                    Next page &raquo;</a>
+        </li>
             {% endif %}
         </ul>
     </nav>
