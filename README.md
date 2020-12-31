@@ -72,7 +72,7 @@ I have created mobile, tablet, desktop and tablet wireframes.
 
    
     - Background information <br>
-    
+
       A short text providing background information on the company.
         - Go to our shop <br>
         Allows the user to reach the product page
@@ -287,9 +287,9 @@ Fix: Delete all data and remigrate again <br>
 
 6- run the initial migrations by typing python3 manage.py migrate.
 
-7- Create a superuser to have accuses to the app as admin by creating:
+7- Create a superuser to have accuses to the app as admin by creating: python3 manage.py createsuperuser 
 
-8- email&username&password
+8- email&username & password 
 
 9- initial commit to github.
 
