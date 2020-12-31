@@ -229,4 +229,105 @@ to check my JS code.
 - [PEP8](http://pep8online.com/)
 to check my python code
 
+### Autonomous Testing:
+
+-  MostPython apps were tested autonomously
+
 ### Manual Testing:
+
+- Navbar <br>
+Test: Navigate to all pages through the navbar <BR>
+Result: No error
+
+- Homepage hero image<br>
+Test: Check overlay text on readability and contrast <br>
+Result: Bad readability and contras<br>
+Fix: Change image and font color
+
+- Shopping bag <br>
+Test: Responsiveness on small devices<br>
+Result: Not responsive <br>
+Fix: Deleting the image in shopping bag, as it is unnessecary and appears again in check out 
+
+- Footer <br>
+Test: Responsiveness on all devices <br>
+Result: Footer covers bottom of pages <br>
+Fix: Add margin 
+
+- Setting <br>
+Test: Adding env.py <br>
+Result: Deployment unseccsesfull as env is a hidden file<br>
+Fix: Add if-statement "if os.path.exists('env.py'):"
+
+- Blog <br>
+Test: Opening blog page <br>
+Result: Does not work <br>
+Reason: Deleted require field and migrated afterwards <br>
+Fix: Delete all data and remigrate again <br>
+
+## Deployment
+
+#### The project is stored in a Github [repository](https://v-gtable.herokuapp.com/).
+
+#### I have made the follwoing steps to deploye my app: 
+
+### Github/Gitpod:
+
+1- Create a repo in GitHub using the code institute template
+2- Click on the green button to open my project in gitpod
+3- Install Django:  pip3 install django
+4- Create the project : django-admin startproject V_getable
+5- Create .gitignore file and add the files we w’ont to push
+6- run the initial migrations by typing python3 manage.py migrate.
+7- Create a superuser to have accuses to the app as admin by creating:
+8- email&username&password
+9- initial commit to github.
+10- set environment variables, adding them to your Gitpod settings or to env-py and add the secret key there: 
+import os
+os.environ['SECRET_KEY']
+11- creating the requiremtns.txt by typing :pip3 install -r requirements.txt, in the terminal. to identify the languages and packages.
+I have added STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY to my gitpod setting to facilitate my checkout testing 
+12- to allow hosting in both locally and heroku I have to add: ALLOWED_HOSTS = ['v-gtable.herokuapp.com', 'localhost']
+python3 manage.py runserver is what we use to see our live site locally 
+
+### Heruko:
+
+1- creating a new app in my heroku page and called it V-Gtable.
+
+2- to use Heroku Postgress database I have to typ the follwoing command in my gitpod terminal: 
+- pip3 install dj_database_url
+- pip3 install psycopg2-binary
+- pip3 install gunicorn
+in my seeting.py added the follwoing after importing : 
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+    I have to import dj_database_url in my setting.py 
+
+3- freeze the requiremnt again as explained in Github deplyoment section.
+so the new packages are defined. 
+
+4- Migrate my database. always checking with the command makemigrations --dry-run to
+If all is good we type python3 manage.py make migrations then python3 manage.py migrate 
+
+5- connecting my github repo in the setting of my project in heroku
+
+5- commit and push all:
+- git add .
+- git commit -m "your comment"
+- git push 
+
+### Amazon Web Services AWS
+
+
+
+
+
