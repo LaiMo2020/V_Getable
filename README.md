@@ -27,34 +27,34 @@ For the creation of my wireframes I used the Balsamiqu program (see “technolog
 I have created mobile, tablet, desktop and tablet wireframes.
 
 1- Desktop Wireframes
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/V-getable%20browser.png](README-images/wireframe/V-getable-browser.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/Products%20browser%20.png](README-images/wireframe/Products-browser.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/blog%20browser.png](README-images/wireframe/blog-browser.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/checkout%20browser.png](README-images/wireframe/checkout-browser.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/comments%20browser.png](README-images/wireframe/comments-browser.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/shopping%20cart%20browser.png](README-images/wireframe/shopping-cart-browser.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/signin%20browser.png](README-images/wireframe/signin-browser.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/signup%20browser%20.png](README-images/wireframe/signup-browser.png)
+  - ![Homepage](README-images/wireframe/V-getable-browser.png)
+  - ![Prodcuts](README-images/wireframe/Products-browser.png)
+  - ![Blog](README-images/wireframe/blog-browser.png)
+  - ![Checkout](README-images/wireframe/checkout-browser.png)
+  - ![Comments](README-images/wireframe/comments-browser.png)
+  - ![Shooping bag](README-images/wireframe/shopping-cart-browser.png)
+  - ![Sign in](README-images/wireframe/signin-browser.png)
+  - ![Sign up](README-images/wireframe/signup-browser.png)
 
 2- Mobile Wireframes
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/V-getable.png](README-images/wireframe/V-getable.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/Products.png](README-images/wireframe/Products.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/blog.png](README-images/wireframe/blog.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/checkout.png](README-images/wireframe/checkout.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/comments.png](README-images/wireframe/comments.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/shopping%20cart%20browser.png](README-images/wireframe/Shoping-cart.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/signin.png](README-images/wireframe/signin.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/signup.png](README-images/wireframe/signup.png)
+  - ![Home page](README-images/wireframe/V-getable.png)
+  - ![Products](README-images/wireframe/Products.png)
+  - ![Blog](README-images/wireframe/blog.png)
+  - ![Checkout](README-images/wireframe/checkout.png)
+  - ![Comments](README-images/wireframe/comments.png)
+  - ![Shopping bag](README-images/wireframe/Shoping-cart.png)
+  - ![Sign in](README-images/wireframe/signin.png)
+  - ![sign up](README-images/wireframe/signup.png)
 
 3- Tablet Wireframes
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/V-getable%20iPad.png](README-images/wireframe/V-getable-iPad.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/Products%20Ipad.png](README-images/wireframe/Products-Ipad.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/blog%20Ipad.png](README-images/wireframe/blog-pad.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/checkout%20copy.png](README-images/wireframe/checkout-ipad.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/comments%20Ipad.png](README-images/wireframe/comments-Ipad.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/Shoping%20cart%20ipad.png](README-images/wireframe/Shoping-cart-ipad.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/signin%20Ipad.png](README-images/wireframe/signin-Ipad.png)
-  - ![https://github.com/LaiMo2020/V_Getable/blob/master/media/README-images/wireframe/signup%20Ipad.png](README-images/wireframe/signup-Ipad.png)
+  - ![Home page](README-images/wireframe/V-getable-iPad.png)
+  - ![Products](README-images/wireframe/Products-Ipad.png)
+  - ![Blog](README-images/wireframe/blog-pad.png)
+  - ![Checkout](README-images/wireframe/checkout-ipad.png)
+  - ![Comments](README-images/wireframe/comments-Ipad.png)
+  - ![Shopping bag](README-images/wireframe/Shoping-cart-ipad.png)
+  - ![Sign in](README-images/wireframe/signin-Ipad.png)
+  - ![Sign out ](README-images/wireframe/signup-Ipad.png)
 
 
 
@@ -140,7 +140,7 @@ There are three categories that the admin can edit and delete.
 Under "Products" the admin can see an overview, edit, create and delete products and attach photos to the product information.
 
 ### Features Left to Implement
-An annualie subscription with fixed places to collect products
+- Possibility for users to subscribe for a weekly delivery of vegetables that get delivered to a centralized pick-up station
 
 ### Database relations
 
