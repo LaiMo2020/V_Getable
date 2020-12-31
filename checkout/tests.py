@@ -18,7 +18,7 @@ class TestOrderForm(TestCase):
 
     def test_street_address2_is_not_required(self):
         form = OrderForm({'full_name': 'Test Name'
-                          'email:' 'Test Description'
+                          'email:' 'Test email'
                           'street_address1:' 'Test Address'
                           'town_or_city:' 'Test Town or City'
                           'postcode:' 'Test Postcode'
