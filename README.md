@@ -1,6 +1,6 @@
 # Milestone Project 4: V-Getable
 
-![Presentaion photo ](media/README-images/responsice.png)
+![Presentaion photo ](README-images/responsive.png)
 
 The purpose of the project “V-getable” is to build a full-stack site based around business logic used to control a centrally-owned dataset.
 
