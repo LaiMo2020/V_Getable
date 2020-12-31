@@ -23,10 +23,10 @@
         {% else %}
             <img class="card-img mx-auto card-1" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}" />
         {% endif %}
-        <p style="margin: 1rem;" class="card-text">{{ post.content|safe|slice:":300" }}...</p>
+        <p style="margin: 2rem;" class="card-text">{{ post.content|safe|slice:":300" }}...</p>
         <a href="{% url 'post_detail' post.slug  %}" class="btn blog">Read More</a>
     </div>
-    <div class="card-footer text-muted">
+    <div class="card-footer text-muted footer-margin">
         {{ post.author }} | {{ post.created_on}}
     </div>
 </div>
