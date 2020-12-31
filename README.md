@@ -61,6 +61,7 @@ I have created mobile, tablet, desktop and tablet wireframes.
 ## Sections and features 
 
 ### Home-page
+
    - Navbar <br>
    The navbar appears in all sections and helps the user to navigate through them with links to the "Home-page" (represented by the logo) "Products", "Blog" and "Profile"
    In mobile devices and tablet the navbar transforms to a drop-down menu. The shopping bag item remains visible.
@@ -70,11 +71,12 @@ I have created mobile, tablet, desktop and tablet wireframes.
         Gives an overview of the total amount and content in the users shopping bag
 
    
-    - Background information<br>
-    A short text providing background information on the company.
-        - Go to our shop<br>
+    - Background information <br>
+    
+      A short text providing background information on the company.
+        - Go to our shop <br>
         Allows the user to reach the product page
-        - Go to our blog<br>
+        - Go to our blog <br>
         Allows the user to reach the blog
 
 ### Products
