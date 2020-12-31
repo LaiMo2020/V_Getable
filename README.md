@@ -373,10 +373,10 @@ I had to add those settting to setting.py as well :
 
 
 ## Credits
-"Boutique Ado" project in the module
-https://djangocentral.com/building-a-blog-application-with-django/ https://djangocentral.com/creating-comments-system-with-django/ https://djangocentral.com/adding-pagination-with-django/
+- "Boutique Ado" project in the module
+- https://djangocentral.com/building-a-blog-application-with-django/ <br>https://djangocentral.com/creating-comments-system-with-django/ <br>https://djangocentral.com/adding-pagination-with-django/<br>
 to create my blog and comments models
-bootstrap  
+- Bootstrap templates
 
 ### Media
 The static images used across the page were obtained from https://unsplash.com/
