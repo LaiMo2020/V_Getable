@@ -274,20 +274,32 @@ Fix: Delete all data and remigrate again <br>
 ### Github/Gitpod:
 
 1- Create a repo in GitHub using the code institute template
+
 2- Click on the green button to open my project in gitpod
+
 3- Install Django:  pip3 install django
+
 4- Create the project : django-admin startproject V_getable
+
 5- Create .gitignore file and add the files we w’ont to push
+
 6- run the initial migrations by typing python3 manage.py migrate.
+
 7- Create a superuser to have accuses to the app as admin by creating:
+
 8- email&username&password
+
 9- initial commit to github.
+
 10- set environment variables, adding them to your Gitpod settings or to env-py and add the secret key there: 
 import os
 os.environ['SECRET_KEY']
+
 11- creating the requiremtns.txt by typing :pip3 install -r requirements.txt, in the terminal. to identify the languages and packages.
 I have added STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY to my gitpod setting to facilitate my checkout testing 
+
 12- to allow hosting in both locally and heroku I have to add: ALLOWED_HOSTS = ['v-gtable.herokuapp.com', 'localhost']
+
 python3 manage.py runserver is what we use to see our live site locally 
 
 ### Heruko:
@@ -320,12 +332,69 @@ If all is good we type python3 manage.py make migrations then python3 manage.py 
 
 5- connecting my github repo in the setting of my project in heroku
 
-5- commit and push all:
+6- commit and push all:
 - git add .
 - git commit -m "your comment"
 - git push 
 
+see below for all config var in heroku setting:
+
+![Config var](README-images/config-heroku.png)
+
 ### Amazon Web Services AWS
+1- Creating an acount at https://aws.amazon.com/
+
+2- Create a bucket, follow the documentation of how to set your zone, permission ... 
+
+3- Create group and its policy 
+
+4- create auser for this group
+
+5- Install django-storage/boto3,  connecting my bucket to my repo by adding storage to my apps in setting.py.
+adding the following to my setting.py :
+
+    AWS_STORAGE_BUCKET_NAME = 'v-getable'
+    AWS_S3_REGION_NAME = 'eu-north-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+6- Connecting my bucket to s3 in AWS, to store my css files and media
+I had to add those settting to setting.py as well :
+
+   STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'.
+
+
+## Credits
+"Boutique Ado" project in the module
+https://djangocentral.com/building-a-blog-application-with-django/ https://djangocentral.com/creating-comments-system-with-django/ https://djangocentral.com/adding-pagination-with-django/
+to create my blog and comments models
+bootstrap  
+
+### Media
+The static images used across the page were obtained from https://unsplash.com/
+
+
+### Acknowledgements
+A very big thank you goes to my <br>
+1- Code Institute Mentor Brian M. for his invaluable support and guidance throughout this project. <br>
+2- Slack <br>
+3- Tutor support team<br>
+4- Boutique Ado lessons in the module.
+### Disclaimer
+The content of this website is for educational purposes only.
+
+
+
+
+
 
 
 
