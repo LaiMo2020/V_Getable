@@ -3,6 +3,7 @@
 ![Presentaion photo ](README-images/responsive.png)
 
 The purpose of the project “V-getable” is to build a full-stack site based around business logic used to control a centrally-owned dataset.
+you can find the project hosted on Heroku; https://v-gtable.herokuapp.com/
 
 The site includes an online store connecting a group of farms and gardeners selling local products, such as vegetables, fruit, eggs, milk and bread with clients interested in supporting local business. Clients can browse through products, make a selection, shop and pay their order. As a client with a profile, the page offers an option to get free delivery and discounts. Admin-options allow the shop-owner to add and edit products and keep track on the clients orders as well as interact with and inform clients on a blog.
 
